@@ -9,6 +9,74 @@ namespace GoogleBooksService
     public class VolumeService : Service
     {
         /// <summary>
+        /// Returns a list of Google Books publishers.
+        /// Note that this list is not complete, and the values are hard-coded.
+        /// </summary>
+        /// <returns>A list of publishers.</returns>
+        public static List<string> GetPublishers()
+        {
+            return new List<string>()
+            {
+                "A&C Black",
+                "Anchor",
+                "Ballantine Books",
+                "Bantam",
+                "Booktango",
+                "Courier Corporation",
+                "Del Rey",
+                "Doubleday",
+                "Fawcett",
+                "Gollancz",
+                "Good Press",
+                "Good Year Books",
+                "Harper Collins",
+                "Houghton Mifflin Harcourt",
+                "Knopf Books for Young Readers",
+                "Little, Brown",
+                "Macmillan",
+                "MDP Publishing",
+                "Open Road Media",
+                "Pottermore Publishing",
+                "Random House",
+                "Robinson",
+                "Simon and Schuster",
+                "Spectra",
+                "Tor Books",
+                "U of Minnesota Press",
+                "Wildside Press LLC",
+            };
+        }
+
+        /// <summary>
+        /// Returns a list of Google Books categories.
+        /// Note that this list is not complete, and the values are hard-coded.
+        /// </summary>
+        /// <returns>A list of categories.</returns>
+        public static List<string> GetCategories()
+        {
+            return new List<string>()
+            {
+                "Art",
+                "Biography & Autobiography",
+                "Comics & Graphic Novels",
+                "Cooking",
+                "Drama",
+                "Education",
+                "Electricity",
+                "Fiction",
+                "History",
+                "Humor",
+                "Juvenile Fiction",
+                "Pamphlets",
+                "Philosophy",
+                "Science",
+                "Self-Help",
+                "Young Adult Fiction",
+            };
+        }
+
+
+        /// <summary>
         /// Sends a search request. Gets <paramref name="maxResults"/> items (up to 40),
         ///     starting from the <paramref name="startIndex"/> position in the search list.
         /// See <see href="https://developers.google.com/books/docs/v1/using#PerformingSearch"/> for reference.
